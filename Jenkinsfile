@@ -22,15 +22,13 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                script {
-                    // Run unit tests
-                    // Assuming you have a testing framework like JUnit or similar
-                    sh 'javac -cp .:junit-4.13.1.jar HelloWorldTest.java'
-                    sh 'java -cp .:junit-4.13.1.jar org.junit.runner.JUnitCore HelloWorldTest'
-                }
-            }
+    steps {
+        script {
+            sh 'javac -cp .:junit-4.13.1.jar HelloWorldTest.java'
+            sh 'java -cp .:junit-4.13.1.jar org.junit.runner.JUnitCore HelloWorldTest'
         }
+    }
+}
 
         stage('Push to Docker Hub') {
             steps {
