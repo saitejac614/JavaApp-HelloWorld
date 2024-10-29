@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_IMAGE = 'saitejac614/jenkins-app:latest'
+        DOCKER_IMAGE = 'saitejac614/jenkins-app:New'
     }
 
     stages {
